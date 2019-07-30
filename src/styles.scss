@@ -2,7 +2,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "./app/app.component.scss";
 @import "./app/blogpost/blogpost-featured/blogpost-featured.component.scss";
-@import "./app/footer/footer.component.scss";
+@import "./app/components/footer/footer.component.scss";
 
 
 h1 {font-size: 2.4rem;margin-bottom: 30px;}
@@ -14,7 +14,11 @@ h1 {font-size: 2.4rem;margin-bottom: 30px;}
 .navbar-brand img { height:30px; }
 .navbar-dark .navbar-nav .nav-link {color:#fff;}
 .navbar-dark .navbar-nav .active .nav-link {color:#fff;}
-.banner img {width:100%;}
+.banner img {
+  width: 100%;
+  max-height: 550px;
+  height: 100%;
+}
 .blog-box {text-align: center; margin-bottom: 20px; background-color: #ccc; border: 1px solid #eee;}
 .blog-box h3 { margin:20px 0; font-size:22px; color:#000;}
 .blog-box p { color:#666; }
@@ -23,7 +27,13 @@ h1 {font-size: 2.4rem;margin-bottom: 30px;}
 .mtb-40 { margin:40px 0; min-height:450px;}
 .banner-box {position: relative;}
 .intro-text { width:100%; position: absolute; top:30%; text-align: center; color:#fff;}
-.intro-text-box { width: 62%;margin: auto;background-color: rgba(96, 96, 96, 0.6);padding: 20px;border: 10px solid #808080;}
+.intro-text-box {
+  width: 62%;
+  margin: auto;
+  //background-color: rgba(96, 96, 96, 0.6);
+  padding: 20px;
+  //border: 10px solid #808080;
+}
 .intro-text-box h1 {font-size:3em;}
 
 .blog-right h3 {background-color:#000;color: #fff; padding:5px 15px;font-size:20px;}
@@ -61,7 +71,7 @@ h1 {font-size: 2.4rem;margin-bottom: 30px;}
 .table img { width:80px; }
 
 footer {
-  background-color: #fff;
+  background-color: #3333;
   color: #333;
   padding: 20px; padding:20px;
 }
@@ -76,6 +86,9 @@ footer {
 @media (max-width: 767px) {
 .intro-text {display: none;}
 }
+
+
+
 
 
 

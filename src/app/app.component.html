@@ -1,8 +1,7 @@
 <mat-grid-list class="grid-list" fxLayout="column" cols="1" fxLayoutAlign="space-between">
     <app-header></app-header>
-    <app-banner></app-banner>
-    <app-blogpost-featured></app-blogpost-featured>
+    <app-banner *ngIf="router.url == '/'"></app-banner>
+    <app-blogpost-featured *ngIf="router.url == '/'"></app-blogpost-featured>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
 </mat-grid-list>
-
