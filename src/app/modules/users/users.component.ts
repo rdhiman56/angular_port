@@ -12,7 +12,8 @@ export class UsersComponent implements OnInit {
   showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = true;
-  currentClasses: {}; /* Empty object */
+  // currentClasses: {}; /* Empty object */
+  // currentStyles: {};
 
   constructor() { }
 
@@ -28,8 +29,10 @@ export class UsersComponent implements OnInit {
           city: 'Chandigarh',
           state: 'Punjab',
         },
-        image: 'http://lorempixel.com/600/600/people/3',
-        isActive: false
+       // image: 'http://lorempixel.com/600/600/people/3',
+        isActive: false,
+       // balance: 100,
+        registered: new Date('01/03/2019 08:30:00')
       },
       {
         firstName: 'Shubham',
@@ -40,8 +43,8 @@ export class UsersComponent implements OnInit {
           city: 'Kangra',
           state: 'Himachal Pradesh'
         },
-        image: 'http://lorempixel.com/600/600/people/2',
-        isActive: false
+        isActive: false,
+        registered: new Date('01/03/2019 08:30:00')
       },
       {
         firstName: 'Anita',
@@ -52,15 +55,16 @@ export class UsersComponent implements OnInit {
           city: 'Chapra',
           state: 'Bihar'
         },
-        image: 'http://lorempixel.com/600/600/people/1/',
-        isActive: true
+        isActive: true,
+        registered: new Date('01/06/2019 08:30:00')
       }
     ];
 
       // this.showExtended = false;
   //  }, 2000);
       this.loaded = true;
-      this.setCurrentClasses();
+     // this.setCurrentClasses();
+     // this.setCurrentStyles();
       /*this.addUser({
         firstName: 'Raman',
         lastName: 'Dewalker'
@@ -73,11 +77,18 @@ export class UsersComponent implements OnInit {
     this.users.push(user);
   }
 
-  setCurrentClasses() {
+  /*setCurrentClasses() {
     this.currentClasses = {
       'btn-success': this.enableAdd,
       'big-text': this.showExtended
     }
   }
+
+  setCurrentStyles() {
+    this.currentStyles = {
+      'padding-top' :  this.showExtended ? '0' : '40px',
+      'font-size' : this.showExtended ? '0' : '40px'
+    }
+  }*/
 
 }
