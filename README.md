@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 To check jenkins ------ is triggring the build or not
 
-Checking build status
+Checking build status2
