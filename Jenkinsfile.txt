@@ -1,34 +1,19 @@
-pipeline { 
-agent any 
-    stages { 
-        stage ('Build') { 
-          steps { 
-              echo 'Build Print'
+pipeline {
+   agent any
+   stages {
+       stage('Build Code') {
+           steps {
+               sh """
+               echo "Building Artifact from Develop Branch"
+               """
+           }
+       }
+      stage('Deploy Code') {
+          steps {
+               sh """
+               echo "Deploying Code from Develop Branch"
+               """
           }
-        }
-        stage ('Test') { 
-        steps { 
-               echo 'Test Print'
-          }
-        }
-        stage ('QA') { 
-        steps { 
-                echo 'QA Print'
-          }
-         
-        }
-        stage ('Deploy') { 
-        steps { 
-                 echo 'Deploy Print'
-          }
-         
-        }
-        stage ('Monitor') { 
-        steps { 
-                  echo 'Monitor Print'
-          }
-         
-        }
- 
-    }           
- }
+      }
+   }
+}
